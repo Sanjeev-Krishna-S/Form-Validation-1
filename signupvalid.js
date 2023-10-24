@@ -74,4 +74,3 @@ document.addEventListener("DOMContentLoaded", function() {
         passwordStrength.style.display = "none";
     });
 });
-  
