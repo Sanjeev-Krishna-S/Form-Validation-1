@@ -87,3 +87,9 @@ body {
     color:#fff;
 }
 
+.invalid-feedback-password {
+    padding-top: 3px;
+    color: red;
+    display: none;
+    font-size: small;
+}
