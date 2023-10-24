@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // Email Validation
   emailInput.addEventListener("input", function() {
       const email = emailInput.value;
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.(com)$/;
 
       if (email.trim() === "") {
           emailInput.classList.remove("is-invalid");
@@ -24,17 +24,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Phone Number Validation
   phoneNumberInput.addEventListener("input", function() {
-      const phoneNumber = phoneNumberInput.value;
-      const phoneRegex = /^(\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4})/;
+    const phoneNumber = phoneNumberInput.value;
+    const phoneRegex = /^(\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4})$/;
 
-      if (phoneNumber.trim() === "") {
-          phoneNumberInput.classList.remove("is-invalid");
-      } else if (phoneRegex.test(phoneNumber)) {
-          phoneNumberInput.classList.remove("is-invalid");
-      } else {
-          phoneNumberInput.classList.add("is-invalid");
-      }
-  });
+    if (phoneNumber.trim() === "") {
+        phoneNumberInput.classList.remove("is-invalid");
+    } else if (phoneRegex.test(phoneNumber)) {
+        phoneNumberInput.classList.remove("is-invalid");
+    } else {
+        phoneNumberInput.classList.add("is-invalid");
+    }
+});
   
     // Password Validation
     let isTyping = false; // To track if the user is typing

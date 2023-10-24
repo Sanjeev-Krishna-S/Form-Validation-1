@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Kerala Tourism</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="login.css"> 
+    <link rel="stylesheet" href="login.css"> <!-- Link to your external CSS file -->
 </head>
 <body>
     <div class="login-container">
@@ -13,26 +13,24 @@
             <h2 class="text-center mb-4">Login to Kerala Tourism</h2>
             <form action="process_login.php" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Username" required>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your e-mail" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
-                <div class="form-group1">
+                <div class="form-group">
                     <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-                    <!-- Password Strength Indicator -->
-                    <div class="password-strength" id="password-strength">
-                        <p id="pid">Password Strength: <span id="password-strength-text">Weak </p></span>
-                    </div>
-                    <!-- Error Message for Password -->
-                    <div class="invalid-feedback">Password must be at least 8 characters, contain at least one uppercase letter, one lowercase letter, and one number.</div>
                 </div>
-                
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="rememberMe">
                     <label class="form-check-label" for="rememberMe">Remember me</label>
                     <a href="forgot_password.html" class="forgot-password-link">Forgot Password?</a>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <button type="submit" class="btn btn-primary btn-block">
+                    <a href="index.html" style="color: white; text-decoration: none;">Login</a>
+                </button>
                 <div class="text-center mt-3">
-                    <button class="btn btn-danger btn-block">Sign In with Google</button>
+                    <a href="index.html" style="text-decoration: none;">
+                        <button class="btn btn-danger btn-block">Sign In with Google</button>
+                    </a>
                 </div>
                 <div class="text-center mt-3">
                     <p>New to Kerala Tourism? <a href="signup.html">Sign Up</a></p>
