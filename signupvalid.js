@@ -1,44 +1,44 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const emailInput = document.getElementById("email");
-  const phoneNumberInput = document.getElementById("mobileNumber");
-  const passwordInput = document.getElementById("password");
-  const passwordStrength = document.getElementById("password-strength");
+function validateForm() {
+    const emailInput = document.getElementById("email");
+    const phoneNumberInput = document.getElementById("mobileNumber");
+    const passwordInput = document.getElementById("password");
+    const passwordStrength = document.getElementById("password-strength");
 
-  // Initial states: hide the error messages
-  emailInput.classList.remove("is-invalid");
-  phoneNumberInput.classList.remove("is-invalid");
+    // Initial states: hide the error messages
+    emailInput.classList.remove("is-invalid");
+    phoneNumberInput.classList.remove("is-invalid");
 
-  // Email Validation
-  emailInput.addEventListener("input", function() {
-      const email = emailInput.value;
-      const emailRegex = /^[^\s@]+@[^\s@]+\.(com)$/;
+    // Email Validation
+    emailInput.addEventListener("input", function () {
+        const email = emailInput.value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.(com)$/;
 
-      if (email.trim() === "") {
-          emailInput.classList.remove("is-invalid");
-      } else if (emailRegex.test(email)) {
-          emailInput.classList.remove("is-invalid");
-      } else {
-          emailInput.classList.add("is-invalid");
-      }
-  });
+        if (email.trim() === "") {
+            emailInput.classList.remove("is-invalid");
+        } else if (emailRegex.test(email)) {
+            emailInput.classList.remove("is-invalid");
+        } else {
+            emailInput.classList.add("is-invalid");
+        }
+    });
 
-  // Phone Number Validation
-  phoneNumberInput.addEventListener("input", function() {
-    const phoneNumber = phoneNumberInput.value;
-    const phoneRegex = /^(\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4})$/;
+    // Phone Number Validation
+    phoneNumberInput.addEventListener("input", function () {
+        const phoneNumber = phoneNumberInput.value;
+        const phoneRegex = /^(\d{10}|\d{3}[-.\s]\d{3}[-.\s]\d{4})$/;
 
-    if (phoneNumber.trim() === "") {
-        phoneNumberInput.classList.remove("is-invalid");
-    } else if (phoneRegex.test(phoneNumber)) {
-        phoneNumberInput.classList.remove("is-invalid");
-    } else {
-        phoneNumberInput.classList.add("is-invalid");
-    }
-});
-  
+        if (phoneNumber.trim() === "") {
+            phoneNumberInput.classList.remove("is-invalid");
+        } else if (phoneRegex.test(phoneNumber)) {
+            phoneNumberInput.classList.remove("is-invalid");
+        } else {
+            phoneNumberInput.classList.add("is-invalid");
+        }
+    });
+
     // Password Validation
     let isTyping = false; // To track if the user is typing
-    passwordInput.addEventListener("input", function() {
+    passwordInput.addEventListener("input", function () {
         isTyping = true; // User is typing
 
         const password = passwordInput.value;
@@ -69,9 +69,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Hide password strength when the password field is not focused
-    passwordInput.addEventListener("blur", function() {
+    passwordInput.addEventListener("blur", function () {
         isTyping = false; // User stopped typing
         passwordStrength.style.display = "none";
     });
-});
-  
+
+    // Add event listener to the form submission
+    document.getElementById("yourFormId").addEventListener("submit", function (event) {
+        if (!validateForm()) {
+            event.preventDefault(); // Prevent form submission if validation fails
+        } else {
+            // Redirect to the index page after successful form submission
+            window.location.href = "index.html"; // Replace with the actual URL of your index page
+        }
+    });
+}
