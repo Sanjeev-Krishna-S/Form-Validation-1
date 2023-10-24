@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(120deg, #0F2027, #203A43, #2C5364); 
+    font-family: Poppins, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+.login-box {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 40px;
+}
+
+.btn {
+    height: 40px;
+    border-radius: 3px;
+}
+
+.btn-primary, .btn-danger {
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #FF0000;
+}
+
+.btn-danger:hover {
+    background-color: #CC0000;
+}
+
+.form-check-input {
+    margin-top: 0.25rem;
+}
+
+.forgot-password-link {
+    margin-left: 10px;
+}
+
+
+
+
+
+.btn-primary {
+    background-color: #007BFF;
+    margin-top: 10px; 
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+#pid{
+    color: #fff;
+    padding: 5px;
+}
+
+#password-strength {
+    display: none;
+}
+
+

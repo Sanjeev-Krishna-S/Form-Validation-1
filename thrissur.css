@@ -1,0 +1,122 @@
+/* Add this CSS to a file named palakkad.css */
+
+.thrissur-background {
+    background-image: url('./images/athirapplay.jpg'); /* Replace 'palakkad-background.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    text-align: center;
+    color: white;
+    padding: 100px;
+}
+
+.thrissur-background h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.thrissur-background p {
+    font-size: 18px;
+}
+
+.destination-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.destination-card {
+    background-color: #f0f0f0;
+    padding: 40px;
+    margin: 20px;
+    margin-right: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card h2 {
+    font-size: 24px;
+}
+
+/* Add this CSS to the palakkad.css file */
+
+.destination-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.destination-card {
+    background-color: #f0f0f0;
+    padding: 40px; 
+    margin: 20px; 
+    margin-right: 120px;
+    margin-bottom: 70px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-image 0.3s ease;
+    width: 150px; 
+    height: 180px; 
+}
+
+.destination-card:last-child {
+    margin-right: 0; 
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+    background-image: url('card-hover-background.jpg'); 
+}
+
+.destination-card h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.destination-card:nth-child(1) {
+    background-image: url('./images/Athirappilly-falls-kerala-harstuff.jpg'); 
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.destination-card:nth-child(2) {
+    background-image: url('./images/Chennai\ beaches.jpeg');
+    background-size: cover;
+    background-position: center;
+    text-align: justify;
+    
+}
+
+.destination-card:nth-child(3) {
+    background-image: url('./images/punnathur\ 2.jpg'); 
+    background-size: cover;
+    background-position: center;
+
+}
+
+#c1, #c2, #c3 {
+    color: white;
+    text-align: center;
+}
+
+.thrissur-background p {
+   text-align: justify;
+    margin: 10px 0;
+    border: 1px;
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    word-spacing: 5px;
+    line-height: 33px;
+}
+
+h2{
+    text-align: center;
+    margin-top: 50px;
+}
+

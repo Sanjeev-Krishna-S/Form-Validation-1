@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Kerala Tourism</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="signup.css"> 
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-box">
+            <h2 class="text-center text-white mb-4">Sign Up for Kerala Tourism</h2>
+            <form action="process_signup.php" method="post">
+                <div class="form-row">
+                    <!-- First Name Input -->
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                    </div>
+                    <!-- Middle Name Input -->
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" id="middleName" name="middleName" placeholder="Middle Name">
+                    </div>
+                    <!-- Last Name Input -->
+                    <div class="form-group col-md-4">
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <!-- Email Input -->
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                    <!-- Error Message for Email -->
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <!-- Phone Number Input -->
+                <div class="form-group">
+                    <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required>
+                    <!-- Error Message for Phone Number -->
+                    <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                </div>
+                <!-- Date of Birth Input -->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="dob" name="dob" placeholder="Date of Birth" required>
+                </div>
+                <!-- Address Input -->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="address" name="address" placeholder="Address" required>
+                </div>
+                <!-- Nationality Input -->
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Nationality" required>
+                </div>
+                <!-- Password Input -->
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+                    <!-- Password Strength Indicator -->
+                    <div class="password-strength" id="password-strength">
+                        <p id="pid">Password Strength: <span id="password-strength-text">Weak </p></span>
+                    </div>
+                    <!-- Error Message for Password -->
+                    <div class="invalid-feedback">Password must be at least 8 characters, contain at least one uppercase letter, one lowercase letter, and one number.</div>
+                </div>
+                <!-- Terms and Conditions Checkbox -->
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="agreeToTerms" required>
+                    <label class="form-check-label text-white" for="agreeToTerms">I agree to the <a href="terms.html" target="_blank" class="text-primary">Terms and Conditions</a></label>
+                </div>
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-success btn-block mt-3">Sign Up</button>
+                <div class="text-center mt-3">
+                    <p class="text-white">Already have an account? <a href="login.html" class="text-primary">Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="signupvalid.js"></script>
+</body>
+</html>
