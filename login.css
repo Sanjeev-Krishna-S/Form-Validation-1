@@ -93,3 +93,8 @@ body {
     display: none;
     font-size: small;
 }
+
+#hi {
+    color: white; 
+    text-decoration: none;
+}
