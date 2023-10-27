@@ -17,13 +17,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Form submission validation
+   // Form submission validation
     loginButton.addEventListener("click", function(event) {
+        if (emailInput.value.trim() === "") {
+            event.preventDefault(); // Prevent the form from being submitted
+            document.querySelector(".invalid-feedback-email").style.display = "block"; // Show the error message for email
+        } else {
+            document.querySelector(".invalid-feedback-email").style.display = "none"; // Hide the error message for email if it's not empty
+        }
+
         if (passwordInput.value.trim() === "") {
             event.preventDefault(); // Prevent the form from being submitted
-            document.querySelector(".invalid-feedback-password").style.display = "block"; // Show the error message
+            document.querySelector(".invalid-feedback-password").style.display = "block"; // Show the error message for password
         } else {
-            document.querySelector(".invalid-feedback-password").style.display = "none"; // Hide the error message if the password is entered
+            document.querySelector(".invalid-feedback-password").style.display = "none"; // Hide the error message for password if it's not empty
         }
     });
 });
